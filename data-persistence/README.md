@@ -26,7 +26,7 @@ npx wrangler d1 execute DB --file="db/schema.sql"
 npx wrangler d1 execute DB --command="PRAGMA table_list"
 ```
 9. Use this table to store the city, and the generated image prompt in the `/api/generate/prompt` endpoint.
-10. Create a dynamic GET endpoint that generates image for a given ID - `/api/generate/image/:id`
+10. Update the `/api/generate/image` endpoint to be dynamic such that it generates image for a given ID - `/api/generate/image/:id`
 11. Run the development server
 
 ```sh

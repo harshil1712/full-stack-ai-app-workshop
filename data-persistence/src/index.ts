@@ -37,7 +37,7 @@ app.post('/api/generate/prompt', async (c) => {
 	return c.json({ prompt: imagePrompt, id: result?.meta.last_row_id });
 });
 
-app.get('/api/generate/image/:id', async (c) => {
+app.post('/api/generate/image/:id', async (c) => {
 	const id = c.req.param('id');
 	const db = c.env.DB;
 	// Retrieve the image prompt from the D1 database using the provided ID
@@ -63,28 +63,6 @@ app.get('/api/generate/image/:id', async (c) => {
 	} else {
 		return c.json({ message: 'Prompt not found' }, 404);
 	}
-});
-
-app.post('/api/generate/image', async (c) => {
-	const { prompt } = (await c.req.json()) as { prompt: string };
-
-	// Call the Leonardo model to generate an image based on the prompt
-	const generateImage = await c.env.AI.run('@cf/leonardo/lucid-origin', {
-		prompt: prompt,
-		num_steps: 3,
-	});
-
-	if (!generateImage || !generateImage.image) {
-		return c.json({ message: `Failed to generate image` }, 500);
-	}
-	// The image is returned as a base64-encoded string
-	const base64Image = generateImage.image;
-
-	// Use the image property from the response
-	const buffer = Buffer.from(base64Image, 'base64');
-	return new Response(buffer, {
-		status: 200,
-	});
 });
 
 export default app;
