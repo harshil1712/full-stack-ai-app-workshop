@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcard Gallery - AI Postcard Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🖼️ Postcard Gallery</h1>
+            <p>Your collection of AI-generated postcards</p>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">← Back to Generator</a>
+            </nav>
+        </header>
+
+        <div class="gallery-page">
+            <div class="gallery-controls">
+                <div class="card">
+                    <div class="controls-row">
+                        <div class="gallery-stats">
+                            <span id="galleryCount">0 postcards</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button onclick="clearAllPostcards()" class="btn danger">🗑️ Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-content">
+                <div class="card">
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Gallery items will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div class="image-modal" id="imageModal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <img id="modalImage" alt="Full size postcard">
+                <div class="modal-info">
+                    <h3 id="modalCity"></h3>
+                    <p id="modalPrompt"></p>
+                    <small id="modalDate"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

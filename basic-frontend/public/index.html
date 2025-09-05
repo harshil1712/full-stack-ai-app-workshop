@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Postcard Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📮 AI Postcard Generator</h1>
+            <p>Create beautiful AI-generated postcards from around the world</p>
+            <nav class="nav">
+                <a href="gallery.html" class="nav-link">🖼️ View Gallery</a>
+            </nav>
+        </header>
+
+        <!-- Authentication Section -->
+        <div class="auth-section" id="authSection">
+            <div class="card">
+                <h2>🔐 Authentication</h2>
+                <div class="input-group">
+                    <input type="password" id="tokenInput" placeholder="Enter your bearer token">
+                    <button onclick="authenticate()" class="btn primary">Connect</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App Section (hidden until authenticated) -->
+        <div class="app-section" id="appSection" style="display: none;">
+            <!-- Generator Section -->
+            <div class="generator-section">
+                <div class="card">
+                    <h2>✈️ Create a Postcard</h2>
+                    <div class="input-group">
+                        <input type="text" id="cityInput" placeholder="Enter a city name (e.g., Paris, Tokyo, New York)">
+                        <button onclick="generatePrompt()" class="btn primary" id="generatePromptBtn">Generate Prompt</button>
+                    </div>
+                    
+                    <!-- Generated Prompt Display -->
+                    <div class="prompt-section" id="promptSection" style="display: none;">
+                        <h3>📝 Generated Prompt</h3>
+                        <div class="prompt-display" id="promptDisplay"></div>
+                        <button onclick="generateImage()" class="btn secondary" id="generateImageBtn">
+                            🎨 Generate Image
+                        </button>
+                    </div>
+                    
+                    <!-- Image Generation Result -->
+                    <div class="result-section" id="resultSection" style="display: none;">
+                        <h3>🖼️ Your Postcard</h3>
+                        <div class="postcard-result">
+                            <img id="generatedImage" alt="Generated postcard">
+                            <div class="postcard-info">
+                                <h4 id="postcardCity"></h4>
+                                <div class="postcard-actions">
+                                    <button onclick="saveToGallery()" class="btn accent">💾 Save to Gallery</button>
+                                    <a href="gallery.html" class="btn secondary">🖼️ View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Creating your postcard...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
