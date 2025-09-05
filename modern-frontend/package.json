@@ -1,0 +1,28 @@
+{
+	"name": "cf-ai-app-workshop",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"deploy": "npm run build && wrangler deploy",
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"preview": "npm run build && vite preview",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^1.12.3",
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"@types/node": "^24.3.1",
+		"@vitejs/plugin-react": "^5.0.2",
+		"typescript": "^5.5.2",
+		"vitest": "~3.2.0",
+		"wrangler": "^4.33.2"
+	},
+	"dependencies": {
+		"hono": "^4.9.6",
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1"
+	}
+}
