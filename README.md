@@ -2,7 +2,7 @@
 
 This repository contains the code and the instructions for the workshop - **Building a Full-Stack AI Application on the Edge**
 
-[Slides]()
+[Slides](https://slides-fullstack-ai-app-workshop.api-harshil.workers.dev/#/1)
 
 ## Prerequisites
 
