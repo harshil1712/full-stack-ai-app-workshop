@@ -44,3 +44,7 @@ npm run deploy
 
 **NOTE**: If not logged-in, you will be asked to login to your Cloudflare account. If you are a part of multiple Cloudflare organization, you can select the organization you want to deploy this to.
 
+## Resources
+
+- [Hono](https://hono.dev)
+- [The story of web framework Hono, from the creator of Hono](https://blog.cloudflare.com/the-story-of-web-framework-hono-from-the-creator-of-hono/)

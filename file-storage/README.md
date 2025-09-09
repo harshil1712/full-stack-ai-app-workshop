@@ -51,3 +51,8 @@ npm run deploy
 
 **NOTE**: If not logged-in, you will be asked to login to your Cloudflare account. If you are a part of multiple Cloudflare organization, you can select the organization you want to deploy this to.
 
+## Resources
+
+- [Cloudflare R2](https://developers.cloudflare.com/r2/)
+- [R2 Pricing Calculator](https://r2-calculator.cloudflare.com/)
+- [How R2 works](https://developers.cloudflare.com/r2/how-r2-works/)

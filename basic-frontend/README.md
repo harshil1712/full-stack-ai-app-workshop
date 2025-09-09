@@ -37,3 +37,6 @@ npm run deploy
 
 **NOTE**: If not logged-in, you will be asked to login to your Cloudflare account. If you are a part of multiple Cloudflare organization, you can select the organization you want to deploy this to.
 
+## Resources
+
+- [Static Assets](https://developers.cloudflare.com/workers/static-assets/)

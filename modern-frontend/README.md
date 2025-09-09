@@ -108,3 +108,6 @@ npm run deploy
 
 **NOTE**: If not logged-in, you will be asked to login to your Cloudflare account. If you are a part of multiple Cloudflare organization, you can select the organization you want to deploy this to.
 
+## Resources
+
+- [Cloudflare Vite Plugin](https://developers.cloudflare.com/workers/framework-guides/web-apps/react/)

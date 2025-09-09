@@ -50,3 +50,9 @@ npm run deploy
 
 **NOTE**: If not logged-in, you will be asked to login to your Cloudflare account. If you are a part of multiple Cloudflare organization, you can select the organization you want to deploy this to.
 
+## Resources
+
+- [Workers AI](https://developers.cloudflare.com/workers-ai/)
+- [AI Gateway](https://developers.cloudflare.com/ai-gateway/)
+- [Agents](https://developers.cloudflare.com/agents/)
+- [Node.js Compatibility](https://developers.cloudflare.com/workers/runtime-apis/nodejs/)

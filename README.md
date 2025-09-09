@@ -15,4 +15,9 @@ Note: For R2, you will need to enter your Credit Card details. The free tier com
 ## Steps:
 
 1. [Getting Started](./getting-started/README.md)
-2. [Adding Intelligence]()
+2. [Adding Intelligence](./adding-intelligence/README.md)
+3. [Framework Enhancement](./hono-api/README.md)
+4. [Data Persistence](./data-persistence/README.md)
+5. [File Storage](./file-storage/README.md)
+6. [Basic Frontend](./basic-frontend/README.md)
+7. [Modern Frontend](./modern-frontend/README.md)
