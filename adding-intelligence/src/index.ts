@@ -48,6 +48,7 @@ export default {
 			const buffer = Buffer.from(base64Image, 'base64');
 			return new Response(buffer, {
 				status: 200,
+				headers: { 'Content-Type': 'image/jpeg' },
 			});
 		}
 		return new Response('Not Found', { status: 404 });
